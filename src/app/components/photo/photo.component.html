@@ -1,0 +1,10 @@
+<span class="close" (click)="return()"></span>
+
+<section >
+  <article *ngFor="let item of carouselItems, let i = index">
+    <img src="{{item.photoUrl}}" class="photo" (click)="click($event, item.id)" [style.cursor]="i==1?'default':'pointer'" />
+    <div class="text" *ngIf="i === 1">
+      {{item.text}}
+    </div>
+  </article>
+</section>
