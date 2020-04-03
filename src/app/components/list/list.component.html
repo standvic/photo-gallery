@@ -1,7 +1,7 @@
 <header>
   <img src="https://picsum.photos/600/700" class="banner" />
 </header>
-<section *ngFor="let row of this.util.readyItems">
+<section *ngFor="let row of this.gridItems">
   <article *ngFor="let item of row">
     <a [routerLink]="['/photo', item.id]">
       <img src="{{item.photoUrl}}" class="photo" />
